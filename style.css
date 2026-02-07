@@ -1,0 +1,118 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #e0eafc, #cfdef3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 420px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus, select:focus {
+  border-color: #4a90e2;
+}
+
+/* Button */
+button {
+  padding: 10px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #357abd;
+}
+
+/* Task List */
+#taskList {
+  list-style: none;
+  margin-top: 20px;
+}
+
+#taskList li {
+  background: #f7f9fc;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  border-left: 5px solid #4a90e2;
+}
+
+#taskList li b {
+  color: #333;
+}
+
+/* Delete Button */
+#taskList button {
+  background: #ff4d4d;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+#taskList button:hover {
+  background: #d93636;
+}
+
+/* Status Colors */
+#taskList li.Pending {
+  border-left-color: #f0ad4e;
+}
+
+#taskList li["In Progress"] {
+  border-left-color: #5bc0de;
+}
+
+#taskList li.Completed {
+  border-left-color: #5cb85c;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+}
